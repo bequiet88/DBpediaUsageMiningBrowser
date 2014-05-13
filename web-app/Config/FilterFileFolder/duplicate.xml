@@ -1,0 +1,5 @@
+<filters>
+
+<filter classname="filters.DuplicateFilter"/> 
+
+</filters>

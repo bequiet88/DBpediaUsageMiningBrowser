@@ -1,0 +1,27 @@
+<filters>
+
+<filter classname="filters.SortLexicographic"> 
+	<parameters> 
+		<parameter name="ascending" value="false"/>
+	</parameters>
+</filter>
+
+<filter classname="filters.LanguageFilter">
+	<parameters> 
+		<parameter name="lang" value="en"/>
+	</parameters>
+</filter> 
+
+<filter classname="filters.ClusterOddEven"> 
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+</filter>
+
+<filter classname="filters.ClusterOddEven"> 
+	<parameters> 
+		<parameter name="entriesPerPage" value="2"/>
+	</parameters>
+</filter>
+
+</filters>

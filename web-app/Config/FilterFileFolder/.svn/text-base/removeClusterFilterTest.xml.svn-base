@@ -1,0 +1,57 @@
+<filters>
+
+<filter classname="filters.ClusterFilter" caption="10er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+	<addTags>  
+		<addTag name="tag1" index="2"/>
+		<addTag name="tag3" index="2"/>
+		<addTag name="tag2" index="4"/>
+	</addTags>
+</filter> 
+
+<filter classname="filters.ClusterFilter" caption="2er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="2"/>
+	</parameters>
+	<tags op="and">
+		<tag>tag3</tag>
+		<tag>tag1</tag> 
+	</tags>
+</filter>
+
+<filter classname="filters.ClusterFilter" caption="3er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="3"/>
+	</parameters>
+	<tags op="and">
+		<tag>tag2</tag>
+	</tags>
+	<addTags>  
+		<addTag name="tag4" index="1"/>
+	</addTags>
+</filter>
+
+<filter classname="filters.ClusterFilter" caption="1er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="1"/>
+	</parameters>
+	<tags op="and">
+		<tag>tag4</tag>
+	</tags>
+</filter>
+
+<filter classname="filters.SortLexicographic">
+	<parameters> 
+		<parameter name="ascending" value="false"/>
+	</parameters>
+</filter>
+
+<filter classname="filters.RemoveClusterFilter">
+	<parameters> 
+		<parameter name="removeTag" value="tag4"/>
+	</parameters>
+</filter>
+
+</filters>

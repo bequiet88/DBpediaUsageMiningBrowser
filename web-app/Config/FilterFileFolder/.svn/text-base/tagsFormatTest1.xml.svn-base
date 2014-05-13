@@ -1,0 +1,32 @@
+<filters>
+
+<filter classname="filters.ClusterFilter" caption="10er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+	<addTags>
+		<addTag name="Wirtschaft" index="0"/> 
+		<addTag name="USA" index="0"/>
+		<addTag name="Wirtschaft" index="2"/>
+		<addTag name="Politik" index="2"/> 
+		<addTag name="USA" index="2"/>
+		<addTag name="Wirtschaft" index="4"/>
+		<addTag name="Deutschland" index="4"/> 
+	</addTags>
+</filter> 
+
+<filter classname="filters.DuplicateFilter" caption="Dupliziert!">
+    <tags op="and">
+        <tag>Wirtschaft</tag>
+        <not>
+            <tag>Politik</tag>
+        </not>
+        <tags op="or">
+            <tag>Deutschland</tag>
+            <tag>USA</tag>
+        </tags>
+    </tags>
+</filter> 
+
+</filters>
+

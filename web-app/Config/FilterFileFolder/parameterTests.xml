@@ -1,0 +1,17 @@
+<filters>
+
+<filter classname="filters.ParameterTestFilter"> 
+	<parameters> 
+		<parameter name="testByte" value="123"/>
+		<parameter name="testShort" value="12345"/>
+ 		<parameter name="testInt" value="123456789"/>
+ 		<parameter name="testLong" value="12345678987654321"/>
+		<parameter name="testFloat" value="123.456"/>
+ 		<parameter name="testDouble" value="123456.789"/>
+		<parameter name="testBoolean" value="true"/>
+		<parameter name="testChar" value="a"/>
+		<parameter name="testString" value="Hallo"/>
+	</parameters>
+</filter>
+
+</filters>

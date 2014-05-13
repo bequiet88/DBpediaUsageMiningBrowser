@@ -1,0 +1,96 @@
+package result;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import ldb.RDFTriple;
+import filter.Filter;
+
+/**
+ * Leaf of the result tree that holds a table of RDF triples.
+ * 
+ * Table is immutable.
+ */
+
+public class Table extends Result {
+
+	private static final long serialVersionUID = 1L;
+
+	private List<RDFTriple> triples;
+
+	public Table(List<RDFTriple> triples) {
+		super();
+		this.triples = new ArrayList<RDFTriple>(triples);
+	}
+
+	/**
+	 * convenience constructor
+	 * 
+	 * @param triples
+	 */
+
+	public Table(RDFTriple[] triples) {
+		this(Arrays.asList(triples));
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Table other = (Table) obj;
+		if (triples == null) {
+			if (other.triples != null)
+				return false;
+		} else if (!triples.equals(other.triples))
+			return false;
+		return true;
+	}
+
+	@Override
+	public List<Result> getChildren() {
+		return new ArrayList<Result>();
+	}
+
+	/**
+	 * Returns the internal triples as an immutable list
+	 * 
+	 * @return triples for reading
+	 */
+	public List<RDFTriple> getTriples() {
+		return Collections.unmodifiableList(triples);
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((triples == null) ? 0 : triples.hashCode());
+		return result;
+	}
+
+	/**
+	 * Returns the number of triples in the table.
+	 */
+
+	public int size() {
+		return triples.size();
+	}
+
+	@Override
+	public Result use(Filter filter) {
+		Result result = filter.execute(this);
+		result.addTags(tags);
+		result.setCaption(caption);
+		result.getMetadata().putAll(metadata);
+		result.setUnderlyingModel(model);
+		return result;
+
+	}
+
+}

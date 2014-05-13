@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <filterFile option="FilterFileFolder/clusterGrouperKMedoids.xml" />
+  <rendererFile option="RendererFileFolder/emptyRenderers.xml" />
+  <debugMode option="false" />
+  <localMode option="false" />
+  <saveQuery option="false" />
+  <lookupEnabled option="true" />
+  <cancelByStop option="true" />
+  <enableCancelButton option="false" />
+  <enableCancelAllButton option="false" />
+  <displayDelays option="false" />
+  <localModeWithRDF option="false" />
+  <lookUpTimeOut option="false" />
+</config>

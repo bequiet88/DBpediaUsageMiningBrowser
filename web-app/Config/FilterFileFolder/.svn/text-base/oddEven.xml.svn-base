@@ -1,0 +1,9 @@
+<filters>
+
+<filter classname="filters.ClusterOddEven" caption="10er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+</filter> 
+
+</filters>

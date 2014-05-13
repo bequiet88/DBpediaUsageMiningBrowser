@@ -1,0 +1,32 @@
+<renderers>
+
+<renderer name="DefaultCompositeRenderer" targetType="composite"> 
+	<tags op="and"> 
+		<tag>tag1</tag> 
+	</tags>
+</renderer>
+
+<renderer name="ObjPredRenderer" targetType="table"> 
+	<tags op="and"> 
+		<tag>tag2</tag> 
+	</tags>
+</renderer>
+
+<renderer name="DefaultCompositeRenderer" targetType="composite"> 
+	<tags op="and"> 
+		<tag>tag3</tag> 
+	</tags>
+</renderer>
+
+<renderer name="JavaDefaultRenderer" targetType="composite"> 
+	<tags op="and"> 
+		<tag>tag4</tag> 
+	</tags>
+</renderer>
+
+<renderer name="MetaDataCredibilityRenderer" targetType="table"> 
+	<tags op="and"> 
+		<tag>tag5</tag> 
+	</tags>
+</renderer>
+</renderers>

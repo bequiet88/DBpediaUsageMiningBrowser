@@ -1,0 +1,7 @@
+<filters>
+
+<filter classname="filters.DuplicateFilter"/> 
+
+<filter classname="filters.DeduplicateFilter"/>
+
+</filters>

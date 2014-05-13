@@ -1,0 +1,9 @@
+<renderers>
+
+<renderer name="CoordinateRenderer" targetType="table"> 
+	<tags op="and"> 
+		<tag>Coordinate</tag> 
+	</tags>
+</renderer>
+
+</renderers>

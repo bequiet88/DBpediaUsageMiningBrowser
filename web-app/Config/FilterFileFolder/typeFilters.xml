@@ -1,0 +1,18 @@
+<filters>
+
+
+<filter classname="filters.SimpleTypeFilter"/>
+
+<filter classname="filters.InferTypesFilter" caption="Types">
+  <tags op="and">
+    <tag>type</tag>
+  </tags>
+</filter>
+
+<filter classname="filters.SortLexicographic">
+	<tags op="and">
+		<tag>misc</tag>
+	</tags>
+</filter>
+
+</filters>

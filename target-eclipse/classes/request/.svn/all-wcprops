@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request
+END
+AddTagParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/AddTagParameter.java
+END
+Request.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/Request.java
+END
+FilterConfigReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/FilterConfigReader.java
+END
+RequestLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/RequestLocal.java
+END
+QueryRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/QueryRunner.java
+END
+PreCheckRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/PreCheckRunner.java
+END
+QueryHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/request/QueryHandler.java
+END

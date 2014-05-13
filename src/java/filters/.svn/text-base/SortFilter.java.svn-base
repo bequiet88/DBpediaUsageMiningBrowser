@@ -1,0 +1,37 @@
+package filters;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import ldb.RDFTriple;
+import result.Result;
+import result.Table;
+import utils.Utils;
+import filter.FilterTable;
+
+/**
+ * Skeleton for a sorting filter.
+ * 
+ * Just implement comparator() to return a comparator on RDFTriple that suits your needs.
+ * 
+ */
+public abstract class SortFilter extends FilterTable {
+
+	@Override
+	public Result execute(Table table) {
+
+		List<RDFTriple> solutions = Utils.cloneTriples(table);
+		Collections.sort(solutions, comparator());
+		return new Table(solutions);
+	}
+
+	/**
+	 * Implement this to return a comparator that suits your needs.
+	 * 
+	 * @return comparator on RDFTriple
+	 */
+
+	protected abstract Comparator<RDFTriple> comparator();
+
+}

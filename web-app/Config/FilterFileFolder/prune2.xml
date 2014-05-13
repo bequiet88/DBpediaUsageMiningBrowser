@@ -1,0 +1,20 @@
+<filters>
+
+<filter classname="filters.ClusterFilter" caption="10er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+	<addTags> 
+		<addTag name="tag1" index="2"/>
+		<addTag name="tag3" index="2"/>
+		<addTag name="tag2" index="4"/>
+	</addTags>
+</filter> 
+
+<filter classname="filters.LanguageFilter" caption="10er Blöcke">
+	<parameters> 
+		<parameter name="lang" value="en"/>
+	</parameters>
+</filter> 
+
+</filters>

@@ -1,0 +1,9 @@
+<filters>
+
+<filter classname="filters.SortLexicographic">
+	<parameters> 
+		<parameter name="ascending" value="false"/>
+	</parameters>
+</filter>
+
+</filters>

@@ -1,0 +1,19 @@
+<renderers>
+
+<defaultRenderer name="AbbreviatedTableRenderer"/>
+
+<renderer name="InferredTypeRenderer" targetType="table">
+	<tags op="and">
+		<tag>type</tag>
+		<tag>inferred</tag>	
+	</tags>
+</renderer>
+
+<renderer name="DirectTypeRenderer" targetType="table">
+	<tags op="and">
+		<tag>type</tag>
+		<tag>direct</tag>
+	</tags>
+</renderer>
+
+</renderers>

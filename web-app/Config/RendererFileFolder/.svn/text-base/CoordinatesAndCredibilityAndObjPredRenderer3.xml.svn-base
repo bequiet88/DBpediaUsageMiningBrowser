@@ -1,0 +1,29 @@
+<renderers>
+
+<defaultRenderer name="DefaultCompositeRenderer"/>
+
+<renderer name="CoordinateRenderer" targetType="table"> 
+	<tags op="and"> 
+		<tag>Coordinate</tag> 
+	</tags>
+</renderer>
+
+<renderer name="JavaDefaultRenderer" targetType="composite">
+	<tags op="and"> 
+		<tag>Coordinate</tag> 
+	</tags>
+</renderer>
+
+<renderer name="JavaObjPredRendererTable" targetType="table">
+	<tags op="and">
+		<tag>even</tag>
+	</tags>
+</renderer>
+
+<renderer name="MetadataCredibilityRenderer" targetType="table">
+	<tags op="and">
+		<tag>withCredibilityInformation</tag>
+	</tags>
+</renderer>
+
+</renderers>

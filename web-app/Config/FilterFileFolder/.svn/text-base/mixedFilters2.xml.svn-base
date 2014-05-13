@@ -1,0 +1,34 @@
+<filters>
+
+<filter classname="filters.SortLexicographic"> 
+	<parameters> 
+		<parameter name="ascending" value="false"/>
+	</parameters>
+</filter>
+
+<filter classname="filters.ClusterOddEven">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters> 
+</filter>
+
+<filter classname="filters.ClusterFilter"> 
+	<parameters> 
+		<parameter name="entriesPerPage" value="2"/>
+	</parameters>
+	<tags op="or">
+		<tag>odd</tag>
+	</tags>
+</filter>
+
+<filter classname="filters.ClusterOddEven">
+	<parameters> 
+		<parameter name="entriesPerPage" value="5"/>
+	</parameters>
+	<tags op="or">
+		<tag>even</tag>
+	</tags>
+</filter>
+
+</filters>
+

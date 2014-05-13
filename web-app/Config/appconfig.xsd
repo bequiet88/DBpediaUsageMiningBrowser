@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="config">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="filterFile" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="rendererFile" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="debugMode" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="localMode" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="saveQuery" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lookupEnabled" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancelByStop" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="enableCancelButton" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="displayDelays" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="enableCancelButton" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="localModeWithRDF" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lookUpTimeOut" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="option" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+   	</xs:complexType>
+</xs:element>
+
+</xs:schema>

@@ -1,0 +1,45 @@
+<filters>
+
+<filter classname="filters.ClusterFilter" caption="3er Blöcke">
+	<parameters> 
+		<parameter name="entriesPerPage" value="3"/>
+	</parameters>
+	<addTags>
+		<addTag name="Tiger" index="0"> 
+		<addTag name="Wurm" index="0"> 
+		<addTag name="Pferd" index="0">  
+		
+		<addTag name="Tiger" index="1"> 
+		<addTag name="Katze" index="1"> 
+		<addTag name="Hund" index="1"> 
+		<addTag name="Wurm" index="1"> 
+		
+		<addTag name="Tiger" index="2"> 
+		
+	</addTags>
+</filter> 
+
+<filter classname="filters.DuplicateFilter" caption="Dupliziert!">
+    <tags op="and">
+        <tag>Tiger</tag>
+        <not>
+            <tags op="and">
+            	<tag>Tiger</tag>
+            	<tag>Pferd</tag>
+            </tags>
+        </not>
+        <tags op="or">
+            <tags op="and">
+            	<tag>Pferd</tag>
+            	<tag>Wurm</tag>
+            </tags>
+            <tags op="or">
+            	<tag>Wurm</tag> 
+            	<tag>Katze</tag>
+            </tags>
+        </tags>
+    </tags>
+</filter> 
+
+</filters>
+

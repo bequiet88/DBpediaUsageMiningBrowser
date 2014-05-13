@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/grails-app/controllers/ldb
+END
+GroupFilter.class
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/grails-app/controllers/ldb/GroupFilter.class
+END
+LookupController.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/grails-app/controllers/ldb/LookupController.groovy
+END
+QueryController.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/grails-app/controllers/ldb/QueryController.groovy
+END
+SelectFilter.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/grails-app/controllers/ldb/SelectFilter.class
+END

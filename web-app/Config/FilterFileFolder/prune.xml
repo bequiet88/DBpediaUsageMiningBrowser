@@ -1,0 +1,25 @@
+<filters>
+
+<filter classname="filters.CoordinatesAndNormal" caption="CoordinatesAndNormal"/> 
+
+<filter classname="filters.ClusterOddEven">
+	<parameters> 
+		<parameter name="entriesPerPage" value="10"/>
+	</parameters>
+	<tags op="and">
+		<tag>NoCoordinates</tag>
+	</tags>
+	<addTags> 
+		<addTag name="withCredibilityInformation" index="3"/>
+	</addTags>
+</filter>
+
+<filter classname="filters.MetadataRandomCredibilityFilter">
+	<tags op="and">
+		<tag>withCredibilityInformation</tag>
+	</tags>
+</filter>
+
+<filter classname="filters.PruneTreeFilter"/>
+
+</filters>

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters
+END
+LanguageFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/LanguageFilter.java
+END
+ClusterOddEven.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/ClusterOddEven.java
+END
+RemoveClusterFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/RemoveClusterFilter.java
+END
+HalfFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/HalfFilter.java
+END
+MetadataRandomCredibilityFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/MetadataRandomCredibilityFilter.java
+END
+SelectionFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/SelectionFilter.java
+END
+DuplicateFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/DuplicateFilter.java
+END
+CoordinatesAndNormal.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/CoordinatesAndNormal.java
+END
+DeduplicateFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/DeduplicateFilter.java
+END
+PruneTreeFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/PruneTreeFilter.java
+END
+SortFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/SortFilter.java
+END
+SortLexicographic.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/SortLexicographic.java
+END
+CoordinatesFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/CoordinatesFilter.java
+END
+ParameterTestFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/ParameterTestFilter.java
+END
+ClusterFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/PraktikumLODBrowser/!svn/ver/77/HEIKO%20LDB%205/src/java/filters/ClusterFilter.java
+END
