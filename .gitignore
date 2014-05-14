@@ -21,6 +21,7 @@ stacktrace.log
 
 # Package Files #
 DBpediaUsageMining-SNAPSHOT.jar
+DBpediaUsageMining-0.1.jar
 *.war
 *.ear
 

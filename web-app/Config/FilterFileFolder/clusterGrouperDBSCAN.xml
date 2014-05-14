@@ -1,0 +1,9 @@
+<filters>
+
+<filter classname="filters.ClusterGrouperFilter" caption="DBSCAN">
+	<parameters> 
+		<parameter name="clusterer" value="DBSCAN"/>
+	</parameters>
+</filter>
+
+</filters>

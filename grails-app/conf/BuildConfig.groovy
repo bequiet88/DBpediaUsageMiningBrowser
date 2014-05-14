@@ -11,6 +11,7 @@ grails.project.dependency.resolution = {
 	inherits("global") {
 		// uncomment to disable ehcache
 		// excludes 'ehcache'
+		excludes 'xml-apis'
 	}
 	log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
 	checksums true // Whether to verify checksums on resolve
@@ -41,21 +42,31 @@ grails.project.dependency.resolution = {
 		runtime 'com.hp.hpl.jena:jena-arq:2.9.0'
 		runtime 'com.hp.hpl.jena:jena-iri:0.9.0'
 
-		compile 'org.apache.xerces:xercesImpl:2.9.1'
-//		runtime 'org.apache.xerces:xercesImpl:2.9.1'
+		compile('org.apache.xerces:xercesImpl:2.11.0')
+        {
+			excludes 'xml-apis'
+        }	 
+		runtime('org.apache.xerces:xercesImpl:2.11.0')
+		{
+			excludes 'xml-apis'
+		}
+
+		compile 'xml-apis:xml-apis:1.4.01'
+		runtime 'xml-apis:xml-apis:1.4.01'
+		
 		compile 'org.apache.commons.lang3:commons-lang3:3.1'
-//		runtime 'org.apache.commons.lang3:commons-lang3:3.1'
+		runtime 'org.apache.commons.lang3:commons-lang3:3.1'
 		compile 'org.jdom:jdom:2.0.1'
-//		runtime 'org.jdom:jdom:2.0.1'
+		runtime 'org.jdom:jdom:2.0.1'
 
 		compile 'com.ibm.icu:icu4j:3.4.4'
-//		runtime 'com.ibm.icu:icu4j:3.4.4'
+		runtime 'com.ibm.icu:icu4j:3.4.4'
 
 		compile 'org.apache.commons.io:commons-io:2.4'
-//		runtime 'org.apache.commons.io:commons-io:2.4'
+		runtime 'org.apache.commons.io:commons-io:2.4'
 		
-		compile 'DBpediaUsageMining:DBpediaUsageMining:SNAPSHOT'
-//		runtime 'DBpediaUsageMining:DBpediaUsageMining:SNAPSHOT'
+		compile 'DBpediaUsageMining:DBpediaUsageMining:0.1'
+		runtime 'DBpediaUsageMining:DBpediaUsageMining:0.1'
 
 
 	}

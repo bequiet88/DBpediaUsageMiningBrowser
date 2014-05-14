@@ -1,4 +1,10 @@
-/hibernate.cfg.xml
+/.svn/
+/filter/
+/filters/
+/org/
+/request/
+/result/
+/utils/
+/view/
 /de/
 /ldb/
-/org/

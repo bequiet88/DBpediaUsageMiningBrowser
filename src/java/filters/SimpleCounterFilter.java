@@ -7,27 +7,20 @@ import ldb.RDFTriple;
 import result.Result;
 import result.ResultComposite;
 import result.Table;
-import de.unimannheim.dws.controller.ClusterGrouperController;
 import de.unimannheim.dws.model.ExchangeRDFTriple;
+import de.unimannheim.dws.controller.SimpleCountController;
 import filter.FilterTable;
 
 /**
  * Groups results into clusters 
  * 
  */
-public class ClusterGrouperFilter extends FilterTable {
-
-	
-	private String clusterer = "";
-	
-	public void setClusterer(String clusterer) {
-		this.clusterer = clusterer;
-	}
+public class SimpleCounterFilter extends FilterTable {
 
 	@Override
 	public Result execute(Table table) {
 
-		String[] options = { "-O", "-C", clusterer, "-P", "-R"};
+		String[] options = {"-S","frequency","-N","3","-R"};
 		
 		List<ExchangeRDFTriple> interfaceList = new ArrayList<ExchangeRDFTriple>();
 
@@ -36,8 +29,8 @@ public class ClusterGrouperFilter extends FilterTable {
 					rdfTriple.getPred(), rdfTriple.getObj(), ""));
 		}
 
-		interfaceList = ClusterGrouperController
-				.readObjectPropertyPairsClusterList(interfaceList, options,
+		interfaceList = SimpleCountController
+				.readObjectClassPropertyPairsList(interfaceList, options,
 						this.processedResource);
 
 		ResultComposite resultComponent = new ResultComposite();
@@ -59,11 +52,11 @@ public class ClusterGrouperFilter extends FilterTable {
 					cluster.setCaption(groupCache);
 					resultComponent.add(cluster);
 					
-					// Empty cluster table for next cluster
+					// Empty cluster table for next bin
 					cluster = null;
 					clusterList = new ArrayList<RDFTriple>();
 					
-					// Insert first triple of new cluster
+					// Insert first triple of new bin
 					clusterList.add(new RDFTriple(current.getSub(), current
 							.getPred(), current.getObj()));
 					groupCache = "Group " + current.getGroup();

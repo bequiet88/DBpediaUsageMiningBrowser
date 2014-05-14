@@ -17,7 +17,7 @@
 
 <meta name="layout" content="main" />
 
-<title>MoB4LOD</title>
+<title>Browser for Linked Open Data</title>
 
 <resource:autoComplete skin="test" />
 
@@ -169,7 +169,7 @@ function asyncQuery(query){
 
 ${Debug.printDelayV("begin GSP") }
 
-	<h1 class="h1-href"><a href="../..${request.contextPath}/query/query?token=${token }">MoB4LOD</a></h1>
+	<h1 class="h1-href"><a href="../..${request.contextPath}/query/query?token=${token }">Browser for Linked Open Data</a></h1>
 	
 	<div id = "errorMessage">
     <br>

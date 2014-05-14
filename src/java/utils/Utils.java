@@ -289,6 +289,7 @@ public class Utils {
 
 		// try to get file from springsource project directory
 		File fileFromURI = new File("web-app/Config/" + filename);
+//		System.out.println(fileFromURI.getAbsolutePath());
 		if (fileFromURI.exists())
 			try {
 				return fileFromURI.toURI().toURL();
@@ -297,8 +298,9 @@ public class Utils {
 			}
 
 		// try to get file on Tomcat
-		String contextPath = ServletContextHolder.getServletContext().getContextPath();
-		File fileOnTomcat = new File("webapps/" + contextPath + "/Config/" + filename);
+//		String contextPath = ServletContextHolder.getServletContext().getContextPath();
+		File fileOnTomcat = new File(ServletContextHolder.getServletContext().getRealPath("Config/" + filename));
+//		System.out.println(fileOnTomcat.getAbsolutePath());
 		if (fileOnTomcat.exists())
 			try {
 				return fileOnTomcat.toURI().toURL();
