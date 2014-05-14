@@ -1,10 +1,15 @@
 /.svn/
+/de/
 /filter/
 /filters/
+/hibernate/
+/hibernate.cfg.xml
+/ldb/
+/messages.properties
 /org/
 /request/
 /result/
+/richuiconfig.properties
+/spring/
 /utils/
 /view/
-/de/
-/ldb/
