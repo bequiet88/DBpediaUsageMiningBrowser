@@ -18,11 +18,10 @@
         <r:layoutResources />
 	</head>
 	<body>
-		<!-- <div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div> -->
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">&copy; 2012 <a href="http://www.ke.tu-darmstadt.de/" target="_blank">Knowledge Engineering Group, TU Darmstadt</a>. Powered by <a href="http://www.ke.tu-darmstadt.de/resources/mob4lod" target="_blank">MoB4LOD</a>.</div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
+		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>	
+        <g:javascript library="application"/>
         <r:layoutResources />
 	</body>
 </html>

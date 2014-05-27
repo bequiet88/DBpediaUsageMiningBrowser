@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <filterFile option="FilterFileFolder/clusterGrouperKMedoids.xml" />
-  <rendererFile option="RendererFileFolder/emptyRenderers.xml" />
+  <filterFile option="FilterFileFolder/lexicographicOrder.xml" />
+  <rendererFile option="RendererFileFolder/abbreviatedTableRenderer.xml" />
   <debugMode option="false" />
   <localMode option="false" />
   <saveQuery option="false" />

@@ -65,8 +65,8 @@ grails.project.dependency.resolution = {
 		compile 'org.apache.commons.io:commons-io:2.4'
 		runtime 'org.apache.commons.io:commons-io:2.4'
 		
-		compile 'DBpediaUsageMining:DBpediaUsageMining:0.2'
-		runtime 'DBpediaUsageMining:DBpediaUsageMining:0.2'
+		compile 'DBpediaUsageMining:DBpediaUsageMining:0.3'
+		runtime 'DBpediaUsageMining:DBpediaUsageMining:0.3'
 
 
 	}

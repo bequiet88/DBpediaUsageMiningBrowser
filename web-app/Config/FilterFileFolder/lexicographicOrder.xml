@@ -1,8 +1,8 @@
 <filters>
 
-<filter classname="filters.SortLexicographic">
+<filter classname="filters.SubjectObjectSortLexicographic" caption="lexicographic order">
 	<parameters> 
-		<parameter name="ascending" value="false"/>
+		<parameter name="ascending" value="true"/>
 	</parameters>
 </filter>
 

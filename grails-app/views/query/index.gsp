@@ -2,21 +2,18 @@
 <%@page import="view.RendererEntry"%>
 <%@page import="utils.Debug"%>
 <%@page import="utils.AppConfig"%>
-<%@page import="utils.Utils" %>
+<%@page import="utils.Utils"%>
 
 <html>
 
 <g:if test="${request.token2 == null}">
-<g:set var="token" value="${Utils.getNewToken()}" />
+	<g:set var="token" value="${Utils.getNewToken()}" />
 </g:if>
 <g:else>
-<g:set var="token" value="${request.token2}" />
+	<g:set var="token" value="${request.token2}" />
 </g:else>
 <head>
-<g:javascript library="jquery"/>
-
 <meta name="layout" content="main" />
-
 <title>Browser for Linked Open Data</title>
 
 <resource:autoComplete skin="test" />
@@ -142,124 +139,137 @@ function asyncQuery(query){
 	var tokenLocal = '${token}';
 	query = encodeURIComponent(query);
 
-	var queryUrl = '${request.contextPath}/query/query?querytext=' + query+"&token=" + tokenLocal;
-	jQuery.ajax({
-		type:'GET',
-		url:queryUrl,
-		success:function(r){
-			if(r == '' && !(queryIsCancelled))
-			getResults(tokenLocal, query);
-			else {
-				revertShowLoading();
-				document.getElementById("errorMessage").innerHTML = r;
-			}
-			return false;
+	var queryUrl = '${request.contextPath}/query/query?querytext=' + query + "&token=" + tokenLocal;
+		jQuery.ajax({
+			type : 'GET',
+			url : queryUrl,
+			success : function(r) {
+				if (r == '' && !(queryIsCancelled))
+					getResults(tokenLocal, query);
+				else {
+					revertShowLoading();
+					document.getElementById("errorMessage").innerHTML = r;
+				}
+				return false;
 			},
-		error:function(e){
+			error : function(e) {
 			}
 		});
 
-}
+	}
 </script>
+
+<script src="${request.contextPath}/static/plugins/jquery-1.7.1/js/jquery/jquery-1.7.1.min.js" type="text/javascript" ></script>
 
 </head>
 <body>
 
-<!--query input field -->
+	<!--query input field -->
 
-${Debug.printDelayV("begin GSP") }
+	${Debug.printDelayV("begin GSP") }
 
-	<h1 class="h1-href"><a href="../..${request.contextPath}/query/query?token=${token }">Browser for Linked Open Data</a></h1>
-	
-	<div id = "errorMessage">
-    <br>
-    </div>
-    
-    <g:if test="${request.errorOccurred }">
-	${request.errorMessage }
+	<h1 class="h1-href">
+		<a href="../..${request.contextPath}/query/query?token=${token }">Browser
+			for Linked Open Data</a>
+	</h1>
+
+	<div id="errorMessage">
+		<br>
+	</div>
+
+	<g:if test="${request.errorOccurred }">
+		${request.errorMessage }
 	</g:if>
-	
+
 	<div id="loading" class="loading-invisible">
-    	<p><img src="${resource(dir: 'images', file: 'loadingBar.gif')}" width="200" height="30" /></p>
-    </div>
-    
+		<p>
+			<img src="${resource(dir: 'images', file: 'loadingBar.gif')}"
+				width="200" height="30" />
+		</p>
+	</div>
+
 	<g:form name="querySubmit" action="query" onSubmit="return false;">
 	    Enter keyword or URI:
-		<richui:autoComplete name="querytext" id="querytextInput" style="width: 50%"
-			action="${createLinkTo('dir': 'lookup/search')}"
+		<richui:autoComplete name="querytext" id="querytextInput"
+			style="width: 50%" action="${createLinkTo('dir': 'lookup/search')}"
 			onItemSelect="asyncQuery(document.querySubmit.querytext.value)"
-			title="Enter keyword or URI"/>
-		<input type="submit" value="Query URI" onclick="asyncQuery(document.querySubmit.querytext.value)"  />
-        <input type="hidden" name="token" value="${token }">
+			title="Enter keyword or URI" />
+		<input type="submit" value="Query URI"
+			onclick="asyncQuery(document.querySubmit.querytext.value)" />
+		<input type="hidden" name="token" value="${token }">
 	</g:form>
-	
-	
+
+
 	<script type="text/javascript">
 	$(document).ready(function() {
-	  	$(window).keydown(function(event){
-	  	  if(event.keyCode == 13) {
-	   	   event.preventDefault();
-	   	   asyncQuery(document.querySubmit.querytext.value);
-	   	   return false;
-	 	   }
-		  });
+			$(window).keydown(function(event) {
+				if (event.keyCode == 13) {
+					event.preventDefault();
+					asyncQuery(document.querySubmit.querytext.value);
+					return false;
+				}
+			});
 		});
 	</script>
-	
+
 	<g:if test="${AppConfig.isEnableCancelButton()}">
-		<button id="cancelB" class="cancelButton" onclick="cancelQueries('${token}')">Cancel Query</button>
+		<button id="cancelB" class="cancelButton"
+			onclick="cancelQueries('${token}')">Cancel Query</button>
 	</g:if>
 	<g:if test="${AppConfig.isEnableCancelAllButton()}">
-	<button id="cancelAllB" class="cancelButton" onclick="cancelAllQueries()">Cancel All Queries</button>
+		<button id="cancelAllB" class="cancelButton"
+			onclick="cancelAllQueries()">Cancel All Queries</button>
 	</g:if>
-	
-	 
+
+
 	<div>
-	<!-- don't worry about warnings about tags not closing: dynamically inserting divs confuses the static checker -->
-			<g:if test="${request.renderers != null}">
+		<!-- don't worry about warnings about tags not closing: dynamically inserting divs confuses the static checker -->
+		<g:if test="${request.renderers != null}">
 				Results for "${Utils.utf8toUnicode(  request.querytext)}":
 				<br>
-				<br>
-				
-				<!-- begin actual rendering -->
-				<!-- iterate over all renderers -->
-				${Debug.printDelayV("before rendering") }
-					<g:set var="j" value="${0}"/> 
-					<g:each in="${request.renderers}">
-						<%j++%>
-						<g:if test="${it.isClusterStart()}">
-							<g:if test="${it.getCaption() != null}">
-								<hr class="captionTop">
-								<p align="center">
-									<b> ${it.getCaption()}
-									</b>
-								</p>
-								<hr class="captionBottom">
-							</g:if>
-							<div class="rendererCluster">
-						</g:if>
-						<g:else>
-							<g:if test="${it.isClusterEnd()}">
-						</div>
-						</g:if>
-						<g:else>
-							<g:if test="${it.getResult() != null && it.getResult().size() != 0}">
-								<g:if test="${it.getCaption() != null}">
-									<hr class="captionTop">
-									<p align="center">
-										<b> ${it.getCaption()}
-										</b>
-									</p>
-									<hr class="captionBottom">
-								</g:if>
-								<div id="${it.getName()}">
-								<!-- renderers are inserted here -->
-								<g:render template="${it.getName()}" model="[result: it.getResult()]" />
-								</div>
-								<g:if test="${request.renderers.size() > j}">
-								<g:if test="${!request.renderers.get(j).isClusterEnd() && !request.renderers.get(j).isClusterStart()}">
-								<!-- set hr-tag if next RendererEntry is not end and not start of a cluster -->
-							<hr>
+			<br>
+
+			<!-- begin actual rendering -->
+			<!-- iterate over all renderers -->
+			${Debug.printDelayV("before rendering") }
+			<g:set var="j" value="${0}" />
+			<g:each in="${request.renderers}">
+				<%j++%>
+				<g:if test="${it.isClusterStart()}">
+					<g:if test="${it.getCaption() != null}">
+						<hr class="captionTop">
+						<p align="center">
+							<b> ${it.getCaption()}
+							</b>
+						</p>
+						<hr class="captionBottom">
+					</g:if>
+					<div class="rendererCluster">
+				</g:if>
+				<g:else>
+					<g:if test="${it.isClusterEnd()}">
+	</div>
+	</g:if>
+	<g:else>
+		<g:if test="${it.getResult() != null && it.getResult().size() != 0}">
+			<g:if test="${it.getCaption() != null}">
+				<hr class="captionTop">
+				<p align="center">
+					<b> ${it.getCaption()}
+					</b>
+				</p>
+				<hr class="captionBottom">
+			</g:if>
+			<div id="${it.getName()}">
+				<!-- renderers are inserted here -->
+				<g:render template="${it.getName()}"
+					model="[result: it.getResult()]" />
+			</div>
+			<g:if test="${request.renderers.size() > j}">
+				<g:if
+					test="${!request.renderers.get(j).isClusterEnd() && !request.renderers.get(j).isClusterStart()}">
+					<!-- set hr-tag if next RendererEntry is not end and not start of a cluster -->
+					<hr>
 				</g:if>
 			</g:if>
 		</g:if>
@@ -267,15 +277,14 @@ ${Debug.printDelayV("begin GSP") }
 	</g:else>
 	</g:each>
 	</g:if>
-	
-<script type="text/javascript">
-	document.getElementById('querytextInput').focus();
- </script>
 
-${Debug.printDelayV("end GSP") }
-${Debug.stopTimer() }
-${AppConfig.isDebugMode() ? System.out.println("---- query " + params.querytext + " end ----")  : ""}
+	<script type="text/javascript">
+		document.getElementById('querytextInput').focus();
+	</script>
 
+	${Debug.printDelayV("end GSP") }
+	${Debug.stopTimer() }
+	${AppConfig.isDebugMode() ? System.out.println("---- query " + params.querytext + " end ----")  : ""}
 
 </body>
 </html>

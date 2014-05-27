@@ -18,7 +18,11 @@ public class SortLexicographic extends SortFilter {
 
 	@Override
 	protected Comparator<RDFTriple> comparator() {
+		
+
+		
 		return new Comparator<RDFTriple>() {
+			
 			@Override
 			// implementation of Comparator on RDFTriple
 			public int compare(RDFTriple o1, RDFTriple o2) {
@@ -34,6 +38,7 @@ public class SortLexicographic extends SortFilter {
 				// if not ascending reverse order
 				return ascending ? res : res * -1;
 			}
+			
 		};
 	}
 }
