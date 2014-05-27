@@ -3,7 +3,7 @@
 <%@page import="utils.Debug"%>
 <%@page import="utils.AppConfig"%>
 <%@page import="utils.Utils"%>
-
+<g:applyLayout name="main">
 <html>
 
 <g:if test="${request.token2 == null}">
@@ -13,8 +13,7 @@
 	<g:set var="token" value="${request.token2}" />
 </g:else>
 <head>
-<meta name="layout" content="main" />
-<title>Browser for Linked Open Data</title>
+
 
 <resource:autoComplete skin="test" />
 
@@ -288,3 +287,4 @@ function asyncQuery(query){
 
 </body>
 </html>
+</g:applyLayout>
