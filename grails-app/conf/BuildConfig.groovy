@@ -35,12 +35,19 @@ grails.project.dependency.resolution = {
 		// specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
 		// runtime 'mysql:mysql-connector-java:5.1.16'
-		compile 'com.hp.hpl.jena:jena-core:2.7.0'
-		compile 'com.hp.hpl.jena:jena-arq:2.9.0'
-		compile 'com.hp.hpl.jena:jena-iri:0.9.0'
-		runtime 'com.hp.hpl.jena:jena-core:2.7.0'
-		runtime 'com.hp.hpl.jena:jena-arq:2.9.0'
-		runtime 'com.hp.hpl.jena:jena-iri:0.9.0'
+//		compile 'com.hp.hpl.jena:jena-core:2.7.0'
+//		compile 'com.hp.hpl.jena:jena-arq:2.9.0'
+//		compile 'com.hp.hpl.jena:jena-iri:0.9.0'
+//		runtime 'com.hp.hpl.jena:jena-core:2.7.0'
+//		runtime 'com.hp.hpl.jena:jena-arq:2.9.0'
+//		runtime 'com.hp.hpl.jena:jena-iri:0.9.0'
+		
+		compile 'com.hp.hpl.jena:jena-core:2.11.0'
+		compile 'com.hp.hpl.jena:jena-arq:2.11.0'
+		compile 'com.hp.hpl.jena:jena-iri:1.0.0'
+		runtime 'com.hp.hpl.jena:jena-core:2.11.0'
+		runtime 'com.hp.hpl.jena:jena-arq:2.11.0'
+		runtime 'com.hp.hpl.jena:jena-iri:1.0.0'
 
 		compile('org.apache.xerces:xercesImpl:2.11.0')
         {

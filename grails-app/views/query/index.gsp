@@ -14,6 +14,7 @@
 </g:else>
 <head>
 
+<title>Semantic Web Browser</title>
 
 <resource:autoComplete skin="test" />
 
@@ -168,8 +169,7 @@ function asyncQuery(query){
 	${Debug.printDelayV("begin GSP") }
 
 	<h1 class="h1-href">
-		<a href="../..${request.contextPath}/query/query?token=${token }">Browser
-			for Linked Open Data</a>
+		<a href="../..${request.contextPath}/query/query?token=${token }">Semantic Web Browser</a>
 	</h1>
 
 	<div id="errorMessage">
@@ -284,7 +284,6 @@ function asyncQuery(query){
 	${Debug.printDelayV("end GSP") }
 	${Debug.stopTimer() }
 	${AppConfig.isDebugMode() ? System.out.println("---- query " + params.querytext + " end ----")  : ""}
-
 </body>
 </html>
 </g:applyLayout>

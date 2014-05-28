@@ -1,6 +1,6 @@
 <filters>
 
-<filter classname="filters.SimpleCounterFilter" caption="SimpleCounter">
+<filter classname="filters.SimpleCounterFilter">
 </filter>
 
 </filters>

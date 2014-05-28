@@ -1,6 +1,6 @@
 <filters>
 
-<filter classname="filters.SubjectObjectSortLexicographic" caption="lexicographic order">
+<filter classname="filters.SubjectObjectSortLexicographic">
 	<parameters> 
 		<parameter name="ascending" value="true"/>
 	</parameters>
