@@ -169,7 +169,7 @@ function asyncQuery(query){
 	${Debug.printDelayV("begin GSP") }
 
 	<h1 class="h1-href">
-		<a href="../..${request.contextPath}/query/query?token=${token }">Semantic Web Browser</a>
+		<a href="../..${request.contextPath}/query/query?token=${token }">Wikipedia Facts Table</a>
 	</h1>
 
 	<div id="errorMessage">
