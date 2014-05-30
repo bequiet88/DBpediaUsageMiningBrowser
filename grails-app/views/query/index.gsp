@@ -14,7 +14,7 @@
 </g:else>
 <head>
 
-<title>Semantic Web Browser</title>
+<title>Wikipedia Facts Table</title>
 
 <resource:autoComplete skin="test" />
 
